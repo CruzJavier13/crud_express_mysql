@@ -1,0 +1,36 @@
+<%- include ('../layouts/header.ejs') %> 
+
+<form action="/products" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+       <!-- <label for="">State</label> -->
+        <input type="hidden" value="1" autocomplete="off" name="state_product" id="" class="form-control" placeholder="" aria-describedby="helpId">
+      </div>
+      <div class="form-group">
+          <label for="">Name Product</label>
+          <input type="text" autocomplete="off" name="name_product" id="" class="form-control" placeholder="" >
+        </div>
+        <div class="form-group">
+          <label for="">Brand Product</label>
+          <input type="text" autocomplete="off" name="brand_product" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="">Code Product</label>
+          <input type="text" autocomplete="off" name="code_product" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="">Image Product</label>
+          <input type="file"  autocomplete="off" name="image_product" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="">Presentation Product</label>
+          <input type="text" autocomplete="off" name="presentation_product" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="">Date Created</label>
+          <input type="date" name="date_created" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Save product</button>
+        <a href="/products" class="btn btn-warning">Cancel</a>
+  </form>
+
+<%- include ('../layouts/footer.ejs') %> 

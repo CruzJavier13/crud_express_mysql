@@ -1,0 +1,49 @@
+<%- include ('../layouts/header.ejs') %> 
+       <br>
+        <br>
+        <a name="" id="" class="btn btn-primary" href="/products/create" role="button">Create a new Product</a>
+        <br>
+        <br>
+        <table class="table table-ligth">
+            
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>State</th>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Code</th>
+                    <th>Image</th>
+                    <th>Presentation</th>
+                   <!--<th>Date Create</th>-->
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for( let product = 0; product < products.length; product++ ) { %>
+                <tr>
+                    <th><%=products[product].id_product %></th>
+                    <th><%=products[product].state_product %></th>
+                    <th><%=products[product].name_product %></th>
+                    <th><%=products[product].brand_product %></th>
+                    <th><%=products[product].code_product %></th>
+                    <th>
+                        <img src="images/<%=products[product].image_product%> " width="100" class="img-thumbnail" alt="">
+                    </th>
+                    <th><%=products[product].presentation_product %></th>
+                    <!--<th><%=products[product].date_created %></th>-->
+                    <th>
+                        <form action="/products/delete/<%=products[product].id_product %> " method="post">
+                            <button name="" id="" class="btn btn-danger" type="submit" role="button">Delete</button>
+                        </form>
+                       <form action="/products/edit/<%=products[product].id_product %> " method="get">
+                            <button name="" id="" class="btn btn-warning" type="submit" role="button">Edit</button>
+                       </form>
+                        
+                    </th>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    
+<%- include ('../layouts/footer.ejs') %> 
